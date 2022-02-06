@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<RollingFile name="RollingFile" fileName="./logs/catalinaRollingLog.log" filePattern="${logb.path}/logs/$${date:yyyy-MM}/log-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>{"%d{yyyy-MM-dd HH:mm:ss:SSS}","outputAddress":"%C[%M](%L)","logLevel":"%p","message":"%m","callerName":"%X{callerName}","requestId":"%X{requestId}","addInfos":%X{addInfos}}%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+		
+		<RollingFile name="3RDPackageRollingFile" fileName="./logs/log.log" filePattern="${logb.path}/logs/$${date:yyyy-MM}/log-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>{"%d{yyyy-MM-dd HH:mm:ss:SSS}","outputAddress":"%C[%M](%L)","logLevel":"%p","message":"%m","callerName":"%X{callerName}","requestId":"%X{requestId}"}%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="250 MB" />
+			</Policies>
+		</RollingFile>
+		
+		<Console name="Console" target="SYSTEM_OUT">  
+      		<PatternLayout>
+				<Pattern>%-d{yyyy-MM-dd HH:mm:ss:SSS} %X{requestId} [ %t:%r ] - %C[%M](%L) - [ %p ]  %m%n</Pattern>
+			</PatternLayout>
+        </Console> 
+	</Appenders>
+	
+	<Loggers>
+		<Root level="${logging.level.root}">
+			<AppenderRef ref="RollingFile" />
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

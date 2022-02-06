@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>斗数排盘</title>
+</head>
+<body>
+
+<center>
+    <table width="100%" border="0" align="center" bgcolor="#FFFFFF">
+        <form method="post" action="/ziwei/response">
+
+            <table bgcolor="goldenrod" cellpadding="2pt" cellspacing="0pt">
+                <tbody>
+                <tr>
+                    <th colspan="2" bgcolor="skyblue" height="25">
+                        <span style="color: blue">命 造 资 料</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th><span style="color: white;">性别</span></th>
+                    <td>
+                        <span style="color: red">
+                            <label><input type="radio" name="sex" value="1" checked="checked">男</label>
+                            <label><input type="radio" name="sex" value="2">女</label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span style="color: white">生年</span>
+                    </th>
+                    <td>
+                        <input type="text" name="year" size="11">
+                    </td>
+                </tr>
+                <tr>
+
+                    <th>
+                        <span style="color: white">生月</span>
+                    </th>
+                    <td>
+                        <select style="background-color: white;color: black" name="month">
+                            <option value="1">1 月</option>
+                            <option value="2">2 月</option>
+                            <option value="3">3 月</option>
+                            <option value="4">4 月</option>
+                            <option value="5">5 月</option>
+                            <option value="6">6 月</option>
+                            <option value="7">7 月</option>
+                            <option value="8">8 月</option>
+                            <option value="9">9 月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+
+                    <th>
+                        <span style="color: white">生日</span>
+                    </th>
+                    <td>
+                        <input type="text" name="day" size="11">
+                    </td>
+                </tr>
+                <tr>
+
+                    <th>
+                        <span style="color: white">生时</span>
+                    </th>
+
+                    <td>
+                        <select style="background-color: white;color: black" name="hour">
+                            <option value="1">23 - 01(子)</option>
+                            <option value="2">01 - 03(丑)</option>
+                            <option value="3">03 - 05(寅)</option>
+                            <option value="4">05 - 07(卯)</option>
+                            <option value="5">07 - 09(辰)</option>
+                            <option value="6">09 - 11(巳)</option>
+                            <option value="7">11 - 13(午)</option>
+                            <option value="8">13 - 15(未)</option>
+                            <option value="9">15 - 17(申)</option>
+                            <option value="10">17 - 19(酉)</option>
+                            <option value="11">19 - 21(戌)</option>
+                            <option value="12">21 - 23(亥)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span style="color: white">日干</span>
+                    </th>
+                    <td>
+                        <input type="text" name="dayStr" size="11">
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" bgcolor="skyblue" height="25">
+                        <span style="color: blue">亲 友 生 年</span>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <span style="color: white">父亲</span>
+                    </th>
+                    <td>
+                        <input type="text" name="fatherYear" size="11">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span style="color: white">母亲</span>
+                    </th>
+                    <td>
+                        <input type="text" name="motherYear" size="11">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span style="color: white">妻子</span>
+                    </th>
+                    <td>
+                        <input type="text" name="wifeYear" size="11">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <span style="color: white">朋友</span>
+                    </th>
+                    <td>
+                        <input type="text" name="friendYear" size="11">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" nowrap align="center" bgcolor="brown">
+                        <input type="submit" name="排盘" value="排盘">
+                        <input type="reset" name="清除" value="清除">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </table>
+</center>
+</body>
+</html>
